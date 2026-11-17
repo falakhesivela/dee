@@ -8,7 +8,7 @@ export const contact = {
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=15+James+Watt+Crescent+Industrial+Site",
   whatsappHref: "https://wa.me/27719654906",
-  hours: "Monday to Friday, 08:00 to 16:30",
+  hours: "Monday to Friday, 08:30 – 16:30",
 };
 
 export type SocialIcon = "instagram" | "facebook";
@@ -80,14 +80,6 @@ export const steps = [
 ];
 
 export const faqs = [
-  {
-    q: "What should I bring to my first consultation?",
-    a: "Bring your ID and any documents related to your matter, such as letters, contracts, court papers, medical records or accident reports. If you are unsure, bring what you have and we will tell you what else is needed.",
-  },
-  {
-    q: "How much does a consultation cost?",
-    a: "[Consultation fee and payment options, to be confirmed by the firm.]",
-  },
   {
     q: "I was injured in a car accident. Can I claim?",
     a: "You may be able to claim from the Road Accident Fund if another driver was wholly or partly to blame. Strict time limits apply, so speak to us as soon as possible.",
