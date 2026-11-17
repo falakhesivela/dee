@@ -2,7 +2,7 @@ import Image from "next/image";
 import { contact, services } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
-import { BrandName, Eyebrow, ringCircle, sectionTitle } from "./ui";
+import { BrandName, Eyebrow, SocialLinks, ringCircle, sectionTitle } from "./ui";
 
 function ContactRow({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
   return (
@@ -48,6 +48,10 @@ export function Contact() {
               <span className={value}>{contact.hours}</span>
             </ContactRow>
           </div>
+          <div className="flex flex-col gap-3 border-t border-line pt-6">
+            <span className="text-sm text-muted">Follow us</span>
+            <SocialLinks />
+          </div>
         </div>
 
         <ContactForm />
@@ -72,6 +76,7 @@ export function Footer() {
               Professional. Dedicated. Results driven. Expert legal solutions with integrity and a client-centred
               approach.
             </p>
+            <SocialLinks />
           </div>
           <div className="flex flex-col gap-[11px]">
             <span className={heading}>Our Services</span>
@@ -98,7 +103,6 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap justify-between gap-x-8 gap-y-3 border-t border-gold/30 pt-[22px] text-[13.5px]">
           <span>© 2026 DB Tsamaesi Attorneys Incorporated. All rights reserved.</span>
-          <span>Reg. No. [Company reg. no.] · LPC No. [Number]</span>
         </div>
       </div>
     </footer>

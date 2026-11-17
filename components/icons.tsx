@@ -1,4 +1,4 @@
-import type { ServiceIcon } from "@/lib/site";
+import type { ServiceIcon, SocialIcon } from "@/lib/site";
 
 type IconProps = { className?: string; size?: number; strokeWidth?: number };
 
@@ -77,6 +77,24 @@ export const WhatsAppIcon = (p: IconProps) => (
     <path d="M9 9.5c.3 2.2 2.3 4.3 4.6 4.8l1.2-1.2 1.7.8" strokeLinecap="round" />
   </Svg>
 );
+
+export const InstagramIcon = (p: IconProps) => (
+  <Svg {...p} strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.3" cy="6.7" r="0.4" fill="currentColor" />
+  </Svg>
+);
+
+export const FacebookIcon = (p: IconProps) => (
+  <Svg {...p} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 2.5h-2.8A4.7 4.7 0 0 0 9.5 7.2V10H6.8v3.8h2.7v7.7h3.8v-7.7h2.9l.8-3.8h-3.7V7.6a1 1 0 0 1 1-1H17z" />
+  </Svg>
+);
+
+export function SocialGlyph({ icon, ...p }: IconProps & { icon: SocialIcon }) {
+  return icon === "instagram" ? <InstagramIcon {...p} /> : <FacebookIcon {...p} />;
+}
 
 export function CheckBadge() {
   return (

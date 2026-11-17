@@ -1,5 +1,8 @@
 // Small shared building blocks used across sections.
 
+import { socials } from "@/lib/site";
+import { SocialGlyph } from "./icons";
+
 export const sectionTitle =
   "m-0 font-display text-[clamp(32px,3.6vw,44px)] leading-[1.15] font-normal text-balance text-navy";
 
@@ -47,5 +50,31 @@ export function BrandName({ size = "header" }: { size?: "header" | "footer" }) {
         Attorneys Incorporated
       </span>
     </span>
+  );
+}
+
+/** Instagram / Facebook links. "ring" = gold-ringed navy circles, "plain" = bare icons for the top bar. */
+export function SocialLinks({ variant = "ring" }: { variant?: "ring" | "plain" }) {
+  const ring = variant === "ring";
+  return (
+    <div className={`flex items-center ${ring ? "gap-3" : "gap-4"}`}>
+      {socials.map((s) => (
+        <a
+          key={s.icon}
+          href={s.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`DB Tsamaesi Attorneys on ${s.label}`}
+          title={s.label}
+          className={
+            ring
+              ? `${ringCircle} size-11 no-underline transition-colors duration-200 hover:bg-gold hover:text-navy`
+              : "inline-flex text-on-navy no-underline hover:text-gold-light"
+          }
+        >
+          <SocialGlyph icon={s.icon} size={ring ? 19 : 15} />
+        </a>
+      ))}
+    </div>
   );
 }

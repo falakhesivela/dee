@@ -1,6 +1,6 @@
 export const contact = {
-  phone: "071 965 4906",
-  phoneHref: "tel:+27719654906",
+  phone: "018 384 0642",
+  phoneHref: "tel:+27183840642",
   email: "info@tsamaesiinc.co.za",
   addressLine1: "15 James Watt Crescent",
   addressLine2: "Industrial Site",
@@ -8,8 +8,15 @@ export const contact = {
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=15+James+Watt+Crescent+Industrial+Site",
   whatsappHref: "https://wa.me/27719654906",
-  hours: "[Monday to Friday, 08:00 to 16:30]",
+  hours: "Monday to Friday, 08:00 to 16:30",
 };
+
+export type SocialIcon = "instagram" | "facebook";
+
+export const socials: { label: string; href: string; icon: SocialIcon }[] = [
+  { label: "Instagram", href: "https://www.instagram.com/db.tsamaesi.attorneys.inc/", icon: "instagram" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61594377833943", icon: "facebook" },
+];
 
 export const navLinks = [
   { href: "#top", label: "Home" },

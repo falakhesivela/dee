@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { contact, navLinks } from "@/lib/site";
 import { MailIcon, PhoneIcon, PinIcon } from "./icons";
-import { BrandName, btnNavy } from "./ui";
+import { BrandName, SocialLinks, btnNavy } from "./ui";
 
 export function TopBar() {
   const link = "inline-flex items-center gap-2 text-on-navy no-underline hover:text-gold-light";
@@ -21,10 +21,13 @@ export function TopBar() {
             {contact.email}
           </a>
         </div>
-        <span className="hidden items-center gap-2 sm:inline-flex">
-          <PinIcon size={14} className="text-gold" />
-          {contact.address}
-        </span>
+        <div className="hidden items-center gap-x-7 sm:flex">
+          <span className="hidden items-center gap-2 sm:inline-flex">
+            <PinIcon size={14} className="text-gold" />
+            {contact.address}
+          </span>
+          <SocialLinks variant="plain" />
+        </div>
       </div>
     </div>
   );
