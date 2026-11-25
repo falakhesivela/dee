@@ -43,11 +43,10 @@ export function Faq() {
                     {open ? "−" : "+"}
                   </span>
                 </button>
-                {open && (
-                  <p id={`faq-${i}`} className="m-0 pr-[58px] pb-6 leading-[1.75]">
-                    {f.a}
-                  </p>
-                )}
+                {/* Always rendered (just hidden when closed) so search engines can read every answer. */}
+                <p id={`faq-${i}`} hidden={!open} className="m-0 pr-[58px] pb-6 leading-[1.75]">
+                  {f.a}
+                </p>
               </div>
             );
           })}

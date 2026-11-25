@@ -27,8 +27,8 @@ export function About() {
           <Eyebrow>About the Firm</Eyebrow>
           <h2 className={sectionTitle}>Legal help that puts you, the client, first</h2>
           <p className="m-0 text-[17px] leading-[1.75]">
-            DB Tsamaesi Attorneys Incorporated is committed to providing expert legal solutions with integrity,
-            professionalism and a client-centred approach.
+            DB Tsamaesi Attorneys Incorporated is a law firm in Mahikeng, North West, committed to providing expert
+            legal solutions with integrity, professionalism and a client-centred approach.
           </p>
           <p className="m-0 text-[17px] leading-[1.75]">
             We take the time to understand your situation, explain the law in plain language and give you honest advice

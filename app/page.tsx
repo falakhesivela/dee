@@ -3,10 +3,12 @@ import { Hero } from "@/components/Hero";
 import { About, Commitment, HowItWorks, Services } from "@/components/Sections";
 import { Faq } from "@/components/Faq";
 import { Contact, Footer, WhatsAppButton } from "@/components/Contact";
+import { StructuredData } from "@/components/StructuredData";
 
 export default function Home() {
   return (
     <div className="w-full">
+      <StructuredData />
       <TopBar />
       <Header />
       <main>

@@ -1,14 +1,38 @@
+// The live address. The bare domain redirects here, so this is the canonical
+// URL used for metadata, the sitemap and structured data.
+export const siteUrl = "https://www.tsamaesiinc.co.za";
+
+export const firm = {
+  name: "DB Tsamaesi Attorneys Incorporated",
+  shortName: "DB Tsamaesi Attorneys",
+  tagline: "Attorneys in Mahikeng, North West",
+};
+
 export const contact = {
   phone: "018 384 0642",
   phoneHref: "tel:+27183840642",
   email: "info@tsamaesiinc.co.za",
   addressLine1: "15 James Watt Crescent",
-  addressLine2: "Industrial Site",
-  address: "15 James Watt Crescent, Industrial Site",
+  addressLine2: "Industrial Site, Mahikeng, 2745",
+  address: "15 James Watt Crescent, Industrial Site, Mahikeng, 2745",
+  // Structured form of the address above, for search engines.
+  postal: {
+    streetAddress: "15 James Watt Crescent, Industrial Site",
+    addressLocality: "Mahikeng",
+    addressRegion: "North West",
+    postalCode: "2745",
+    addressCountry: "ZA",
+  },
   mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=15+James+Watt+Crescent+Industrial+Site",
+    "https://www.google.com/maps/search/?api=1&query=15+James+Watt+Crescent+Industrial+Site+Mahikeng+2745",
   whatsappHref: "https://wa.me/27719654906",
   hours: "Monday to Friday, 08:30 – 16:30",
+  // Same hours as above, in the form search engines read. Keep the two in sync.
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:30",
+    closes: "16:30",
+  },
 };
 
 export type SocialIcon = "instagram" | "facebook";

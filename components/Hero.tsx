@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { contact } from "@/lib/site";
+import { contact, firm } from "@/lib/site";
 import { MailIcon, PhoneIcon, PinIcon } from "./icons";
 import { btnGold, btnNavy, DiamondRule } from "./ui";
 
@@ -48,12 +48,13 @@ export function Hero() {
 
       <div className="px-gutter relative mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-12 py-[clamp(64px,8vw,104px)]">
         <div className="flex max-w-[590px] flex-[1_1_480px] flex-col gap-[26px] text-white">
-          <span className="animate-rise font-display-sc text-[17px] tracking-[0.14em] text-gold-light [animation-delay:0.1s]">
-            Professional. Dedicated. Results Driven.
-          </span>
-          <h1 className="m-0 animate-rise font-display text-[clamp(40px,5vw,62px)] leading-[1.1] font-normal text-balance text-white [animation-delay:0.22s]">
-            Upholding the law. Advancing your rights.
+          {/* The small line is the H1 so the page's main heading names the firm's location. */}
+          <h1 className="m-0 animate-rise font-display-sc text-[17px] font-normal tracking-[0.14em] text-gold-light [animation-delay:0.1s]">
+            {firm.tagline}
           </h1>
+          <p className="m-0 animate-rise font-display text-[clamp(40px,5vw,62px)] leading-[1.1] text-balance text-white [animation-delay:0.22s]">
+            Upholding the law. Advancing your rights.
+          </p>
           <div className="animate-rise [animation-delay:0.34s]">
             <DiamondRule width={110} />
           </div>
